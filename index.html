@@ -1,19 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <!-- styles -->
-    <link src="./public/css/main.css"></link>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
+</head>
+
+<body>
     <div class="container">
+        <aside>
+            <div class="top mg-tb-15">
+                <div class="logo">
+                    <img src="./public/images/logo.png" alt="logo">
+                    <h1>T<span class="danger">D</span>C</h1>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="list-menu">
+                <div class="list-menu__item active">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            dashboard
+                        </span>
+                        <h3>Dashboard</h3>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            person
+                        </span>
+                        <h3>Customers</h3>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            list_alt
+                        </span>
+                        <h3>Orders</h3>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            analytics
+                        </span>
+                        <h3>Analytics</h3>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            inbox
+                        </span>
+                        <h3>Messages</h3>
+                        <span class="noti-count">26</span>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            inventory_2
+                        </span>
+                        <h3>Products</h3>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            report
+                        </span>
+                        <h3>Reports</h3>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            settings
+                        </span>
+                        <h3>Settings</h3>
+                    </a>
+                </div>
+                <div class="list-menu__item">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            add
+                        </span>
+                        <h3>Add product</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bottom mg-tb-15">
+                <div class="logout">
+                    <a href="#" class="box-item">
+                        <span class="material-symbols-sharp">
+                            logout
+                        </span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <!-- End of ASIDE -->
     </div>
     <!-- scripts -->
     <script src="./public/scripts/main.js"></script>
-  </body>
+</body>
+
 </html>

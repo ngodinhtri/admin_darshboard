@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400;1,500;1,600&display=swap");
+* {
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f6f9;
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+a {
+  color: #363949;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+.primary {
+  color: #7380ec;
+}
+
+.success {
+  color: #41f1b6;
+}
+
+.warning {
+  color: #ffbb55;
+}
+
+.danger {
+  color: #ff7782;
+}
+
+.info-dark {
+  color: #7d8da1;
+}
+
+.container {
+  display: grid;
+  width: 96%;
+  height: 100%;
+  margin: 0 auto;
+  grid-template-columns: 200px auto 400px;
+  grid-template-rows: 1fr;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+aside h3 {
+  font-weight: 500;
+}
+aside .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+aside .top .logo {
+  display: flex;
+  flex-direction: row;
+}
+aside .top .logo img {
+  width: 30px;
+  height: 30px;
+}
+aside .top .logo h1 {
+  line-height: 30px;
+  margin-left: 5px;
+}
+aside .top .close {
+  display: none;
+}
+aside .list-menu {
+  flex: 1;
+}
+aside .list-menu__item a {
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+aside .list-menu__item a:hover {
+  color: #7380ec;
+}
+aside .list-menu__item a:hover span {
+  margin-left: 10px;
+}
+aside .list-menu__item a:hover .noti-count {
+  margin-left: 0;
+}
+aside .list-menu__item a span {
+  transition: all ease 0.3s;
+}
+aside .list-menu__item a .noti-count {
+  background-color: #ff7782;
+  padding: 5px 8px;
+  border-radius: 0.4rem;
+  color: #dce1eb;
+}
+aside .list-menu__item.active a {
+  background-color: rgba(132, 139, 200, 0.18);
+  color: #7380ec;
+  margin-left: 0;
+}
+aside .list-menu__item.active a span {
+  margin-left: 7px;
+}
+aside .list-menu__item.active a::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background-color: #7380ec;
+}
+aside a {
+  color: #7d8da1;
+}
+aside .box-item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  height: 50px;
+}
+
+.mg-tb-15 {
+  margin: 15px 0;
+}
+
+/*# sourceMappingURL=main.css.map */
