@@ -1,0 +1,105 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+    h3 {
+        font-weight: 500;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            $size: 30px;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: $size;
+                height: $size;
+            }
+
+            h1 {
+                line-height: $size;
+                margin-left: 5px;
+            }
+        }
+
+        .close {
+            display: none;
+        }
+    }
+
+    .list-menu {
+        $ml: 20px; //margin-left
+        $w-ab: 6px; //width .active::before 
+
+        flex: 1;
+
+        &__item a {
+            margin-left: $ml;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $color-primary;
+
+                span{
+                    margin-left: calc($ml/2);
+                }
+
+                .noti-count{
+                    margin-left: 0;
+                }
+            }
+
+            span {
+                transition: all ease 0.3s;
+            }
+
+            .noti-count{
+                background-color: $color-danger;
+                padding: 5px 8px;
+                border-radius: $border-radius-1;
+                color: $color-info-light;
+            }
+        }
+
+        &__item.active a {
+            background-color: $color-light;
+            color: $color-primary;
+            margin-left: 0;
+
+
+            span {
+                margin-left: calc($ml/2 - $w-ab/2);
+            }
+
+            &::before {
+                content: "";
+                width: $w-ab;
+                height: 100%;
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    .bottom {
+        .logout {}
+    }
+
+    a {
+        color: $color-info-dark;
+    }
+
+
+    .box-item {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        height: 50px;
+    }
+}
