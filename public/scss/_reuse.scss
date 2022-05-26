@@ -1,3 +1,36 @@
 .mg-tb-15{
     margin: 15px 0;
 }
+
+.text-muted{
+    color: $color-info-dark;
+}
+
+
+.primary{
+    color: $color-primary !important;
+}
+
+.success{
+    color: $color-success !important;
+}
+
+.warning{
+    color: $color-warning !important;
+}
+
+.danger{
+    color: $color-danger !important;
+}
+
+.card-decor{
+    border-radius: $card-border-radius;
+    background: $color-white;
+    padding: $card-padding;
+    box-shadow: $box-shadow;
+    transition: box-shadow 0.3s ease;
+
+    &:hover{
+        box-shadow: none;
+    }
+}

@@ -19,6 +19,7 @@ body{
     background-color: $color-background;
     font-size: 1.4rem;
     user-select: none;
+    color: $color-dark;
 }
 
 a{
@@ -51,33 +52,15 @@ h5{
     font-size: 1.2rem;
 }
 
-.primary{
-    color: $color-primary;
-}
-
-.success{
-    color: $color-success;
-}
-
-.warning{
-    color: $color-warning;
-}
-
-.danger{
-    color: $color-danger;
-}
-
-.info-dark{
-    color: $color-info-dark;
-}
-
 .container{
     display: grid;
     width: 96%;
+    max-width: 96%;
     height: 100%;
     margin: 0 auto;
-    grid-template-columns: 200px auto 400px;
+    grid-template-columns: 200px auto 300px;
     grid-template-rows: 1fr;
+    box-sizing: border-box
 }
 
-@import "aside", "reuse";
+@import "aside","maincontent", "reuse";

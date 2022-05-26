@@ -1,0 +1,145 @@
+main{
+    margin: 0 15px;
+
+    .date {
+        margin: 5px 0;
+        display: inline-block;
+        background-color: $color-light;
+        padding: 5px 16px;
+        border-radius: $border-radius-1;
+
+        & input[type="date"]{
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+    // --------- End of Date ---------
+
+    .insights{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+
+        .card{
+
+            &-icon{
+                span{
+                    color: $color-white;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+            }
+
+            &:first-child .card-icon span{
+                background-color: $color-primary;
+            }
+            &:nth-child(2) .card-icon span{
+                background-color: $color-danger;
+            }
+            &:last-child .card-icon span{
+                background-color: $color-success;
+            }
+
+            &-content{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & .left{
+                    h3, h2{
+                        font-weight: 700;
+                    }
+                    h3{
+                        margin-bottom: 15px;
+                    }
+                    h2{
+                        font-size: 3rem;
+                    }
+                }
+
+                & .right{
+                    $strokeLength: 225.82925415039062;
+                    position: relative;
+
+                    svg{
+                        
+                        width: 100px;
+                        height: 100px;
+
+                        circle{
+                            fill: none;
+                            stroke: $color-primary;
+                            stroke-width: 15;
+                            stroke-linecap: round;
+                            stroke-dasharray: $strokeLength;
+                            // stroke-dashoffset: $strokeLength;
+                        }
+                    }
+
+                    &.sales svg circle{
+                        stroke-dashoffset:((100 - 81)/100)*$strokeLength;
+                    }
+                    &.expenses svg circle{
+                        stroke-dashoffset:((100 - 62)/100)*$strokeLength;
+                    }
+                    &.income svg circle{
+                        stroke-dashoffset:((100 - 44)/100)*$strokeLength;
+                    }
+
+                    .number{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    // --------- End of Insights ---------
+
+    .recent-order{
+        h2{
+            font-weight: 700;
+        }
+
+        table{
+            width: 100%;
+            background-color: $color-white;
+            text-align: center;
+
+            tr{
+                border-bottom: 2px solid $color-light;
+                
+                &:last-child{
+                    border: none;
+                }
+            }
+
+            th,td{
+                padding: 12px 0;
+            }
+
+            th{
+                font-weight: 700;
+            }
+            td{
+                font-weight: 500;
+                color: $color-dark-variant;
+            }
+        }
+
+        .show-all{
+            display: block;
+            text-align: center;
+            margin: 15px auto;
+            font-weight: 500;
+        }
+    }
+    // --------- End of Recent-Order ---------
+}

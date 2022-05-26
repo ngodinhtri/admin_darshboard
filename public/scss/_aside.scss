@@ -1,7 +1,6 @@
 aside {
     display: flex;
     flex-direction: column;
-    background-color: white;
 
     h3 {
         font-weight: 500;
@@ -72,6 +71,7 @@ aside {
             background-color: $color-light;
             color: $color-primary;
             margin-left: 0;
+            border-radius: $border-radius-1;
 
 
             span {
@@ -85,10 +85,6 @@ aside {
                 background-color: $color-primary;
             }
         }
-    }
-
-    .bottom {
-        .logout {}
     }
 
     a {

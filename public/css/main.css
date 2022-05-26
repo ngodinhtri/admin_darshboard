@@ -17,6 +17,7 @@ body {
   background-color: #f6f6f9;
   font-size: 1.4rem;
   user-select: none;
+  color: #363949;
 }
 
 a {
@@ -49,39 +50,20 @@ h5 {
   font-size: 1.2rem;
 }
 
-.primary {
-  color: #7380ec;
-}
-
-.success {
-  color: #41f1b6;
-}
-
-.warning {
-  color: #ffbb55;
-}
-
-.danger {
-  color: #ff7782;
-}
-
-.info-dark {
-  color: #7d8da1;
-}
-
 .container {
   display: grid;
   width: 96%;
+  max-width: 96%;
   height: 100%;
   margin: 0 auto;
-  grid-template-columns: 200px auto 400px;
+  grid-template-columns: 200px auto 300px;
   grid-template-rows: 1fr;
+  box-sizing: border-box;
 }
 
 aside {
   display: flex;
   flex-direction: column;
-  background-color: white;
 }
 aside h3 {
   font-weight: 500;
@@ -136,6 +118,7 @@ aside .list-menu__item.active a {
   background-color: rgba(132, 139, 200, 0.18);
   color: #7380ec;
   margin-left: 0;
+  border-radius: 0.4rem;
 }
 aside .list-menu__item.active a span {
   margin-left: 7px;
@@ -156,8 +139,151 @@ aside .box-item {
   height: 50px;
 }
 
+main {
+  margin: 0 15px;
+}
+main .date {
+  margin: 5px 0;
+  display: inline-block;
+  background-color: rgba(132, 139, 200, 0.18);
+  padding: 5px 16px;
+  border-radius: 0.4rem;
+}
+main .date input[type=date] {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+main .insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .insights .card-icon span {
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+main .insights .card:first-child .card-icon span {
+  background-color: #7380ec;
+}
+main .insights .card:nth-child(2) .card-icon span {
+  background-color: #ff7782;
+}
+main .insights .card:last-child .card-icon span {
+  background-color: #41f1b6;
+}
+main .insights .card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .insights .card-content .left h3, main .insights .card-content .left h2 {
+  font-weight: 700;
+}
+main .insights .card-content .left h3 {
+  margin-bottom: 15px;
+}
+main .insights .card-content .left h2 {
+  font-size: 3rem;
+}
+main .insights .card-content .right {
+  position: relative;
+}
+main .insights .card-content .right svg {
+  width: 100px;
+  height: 100px;
+}
+main .insights .card-content .right svg circle {
+  fill: none;
+  stroke: #7380ec;
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-dasharray: 225.8292541504;
+}
+main .insights .card-content .right.sales svg circle {
+  stroke-dashoffset: 42.9075582886;
+}
+main .insights .card-content .right.expenses svg circle {
+  stroke-dashoffset: 85.8151165771;
+}
+main .insights .card-content .right.income svg circle {
+  stroke-dashoffset: 126.4643823242;
+}
+main .insights .card-content .right .number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .recent-order h2 {
+  font-weight: 700;
+}
+main .recent-order table {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+main .recent-order table tr {
+  border-bottom: 2px solid rgba(132, 139, 200, 0.18);
+}
+main .recent-order table tr:last-child {
+  border: none;
+}
+main .recent-order table th, main .recent-order table td {
+  padding: 12px 0;
+}
+main .recent-order table th {
+  font-weight: 700;
+}
+main .recent-order table td {
+  font-weight: 500;
+  color: #677483;
+}
+main .recent-order .show-all {
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+  font-weight: 500;
+}
+
 .mg-tb-15 {
   margin: 15px 0;
+}
+
+.text-muted {
+  color: #7d8da1;
+}
+
+.primary {
+  color: #7380ec !important;
+}
+
+.success {
+  color: #41f1b6 !important;
+}
+
+.warning {
+  color: #ffbb55 !important;
+}
+
+.danger {
+  color: #ff7782 !important;
+}
+
+.card-decor {
+  border-radius: 2rem;
+  background: #fff;
+  padding: 1.8rem;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  transition: box-shadow 0.3s ease;
+}
+.card-decor:hover {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=main.css.map */
