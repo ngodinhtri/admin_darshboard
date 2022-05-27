@@ -119,7 +119,7 @@
         <!-- End of ASIDE -->
 
         <main>
-            <div class="mg-tb-15">
+            <div class="mg-tb-15 top">
                 <h1 class="title">Dashboard</h1>
 
                 <div class="date">
@@ -129,7 +129,7 @@
 
             <div class="insights">
                 <div class="card card-decor">
-                    <div class="card-icon">
+                    <div class="card-icon primary">
                         <span class="material-symbols-sharp">
                             account_balance_wallet
                         </span>
@@ -152,7 +152,7 @@
                 </div>
                 <!-- End of Sales -->
                 <div class="card card-decor">
-                    <div class="card-icon">
+                    <div class="card-icon danger">
                         <span class="material-symbols-sharp">
                             paid
                         </span>
@@ -175,7 +175,7 @@
                 </div>
                 <!-- End of Expenses -->
                 <div class="card card-decor">
-                    <div class="card-icon ">
+                    <div class="card-icon success">
                         <span class="material-symbols-sharp">
                             insights
                         </span>
@@ -264,12 +264,136 @@
                         </tr>
                     </tbody>
                 </table>
-                <a href="#" class="show-all primary"> Show All</a>
+                <a href="#" class="show-all primary">Show All</a>
             </div>
         </main>
         <!-- End of Main -->
+        <div class="right">
+            <div class="top mg-tb-15">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="theme-toggle">
+                    <span class="material-symbols-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-sharp">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="user">
+                    <div class="welcome">
+                        <span>
+                            Hey,&nbsp;<span class="username">Ngo Dinh Tri</span>
+                        </span>
+                        <span class="role">Admin</span>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./public/images/profile-2.jpg" alt="user profile">
+                    </div>
+                </div>
+            </div>
+            <!-- End of Top -->
+            <div class="recent-updates">
+                <h2>Recent Updates</h2>
+                <div class="card-decor updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./public/images/profile-1.jpg" alt="profile photo">
+                        </div>
+                        <div class="message">
+                            <p><span class="username">Mike Tyson</span>&nbsp;received his order of Night lion tach GPS
+                                Drone.</p>
+                            <small class="text-muted time">2 Minutes Ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./public/images/profile-3.jpg" alt="profile photo">
+                        </div>
+                        <div class="message">
+                            <p><span class="username">Diana Ayi</span>&nbsp;declined her order of 2 DJI Air 2S.</p>
+                            <small class="text-muted time">2 Minutes Ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./public/images/profile-4.jpg" alt="profile photo">
+                        </div>
+                        <div class="message">
+                            <p><span class="username">Mandy Roy</span>&nbsp;received her order of LARVENDER KF102 Drone.
+                            </p>
+                            <small class="text-muted time">6 Minutes Ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Recent Updates -->
+            <div class="sales-analytics">
+                <h2>Sales Analytics</h2>
+                <div class="list">
+                    <div class="list-item card-decor">
+                        <div class="card-icon primary">
+                            <span class="material-symbols-sharp">
+                                shopping_cart
+                            </span>
+                        </div>
+                        <div class="details">
+                            <div class="sumary">
+                                <span class="title">ONLINE ORDERS</span>
+                                <span class="percent success">+39%</span>
+                                <span class="count">3849</span>
+                            </div>
+                            <small class="time text-muted">Last 24 Hours</small>
+                        </div>
+                    </div>
 
-        <aside></aside>
+                    <div class="list-item card-decor">
+                        <div class="card-icon danger">
+                            <span class="material-symbols-sharp">
+                                shopping_bag
+                            </span>
+                        </div>
+                        <div class="details">
+                            <div class="sumary">
+                                <span class="title">OFFLINE ORDERS</span>
+                                <span class="percent danger">-17%</span>
+                                <span class="count">1100</span>
+                            </div>
+                            <small class="time text-muted">Last 24 Hours</small>
+                        </div>
+                    </div>
+
+                    <div class="list-item card-decor">
+                        <div class="card-icon success">
+                            <span class="material-symbols-sharp">
+                                person
+                            </span>
+                        </div>
+                        <div class="details">
+                            <div class="sumary">
+                                <span class="title">NEW CUSTOMER</span>
+                                <span class="percent success">+25%</span>
+                                <span class="count">849</span>
+                            </div>
+                            <small class="time text-muted">Last 24 Hours</small>
+                        </div>
+                    </div>
+
+                    <div class="add-product">
+                        <span class="material-symbols-sharp icon">
+                            add
+                        </span>
+                        <span>Add Product</span>
+                    </div>
+                </div>
+                <div class="bottom-space"></div>
+            </div>
+            <!-- End of Sales Analytics -->
+        </div>
+        <!-- End of Right -->
     </div>
     <!-- scripts -->
     <script src="./public/scripts/main.js"></script>

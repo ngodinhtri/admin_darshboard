@@ -27,6 +27,7 @@ a {
 img {
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -56,7 +57,7 @@ h5 {
   max-width: 96%;
   height: 100%;
   margin: 0 auto;
-  grid-template-columns: 200px auto 300px;
+  grid-template-columns: 200px auto 350px;
   grid-template-rows: 1fr;
   box-sizing: border-box;
 }
@@ -140,7 +141,12 @@ aside .box-item {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   margin: 0 15px;
+}
+main .top {
+  height: 65px;
 }
 main .date {
   margin: 5px 0;
@@ -158,20 +164,6 @@ main .insights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-}
-main .insights .card-icon span {
-  color: #fff;
-  padding: 10px;
-  border-radius: 50%;
-}
-main .insights .card:first-child .card-icon span {
-  background-color: #7380ec;
-}
-main .insights .card:nth-child(2) .card-icon span {
-  background-color: #ff7782;
-}
-main .insights .card:last-child .card-icon span {
-  background-color: #41f1b6;
 }
 main .insights .card-content {
   display: flex;
@@ -220,16 +212,22 @@ main .insights .card-content .right .number {
   justify-content: center;
   align-items: center;
 }
+main .recent-order {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 main .recent-order h2 {
   font-weight: 700;
 }
 main .recent-order table {
+  flex: 1;
   width: 100%;
   background-color: #fff;
   text-align: center;
 }
 main .recent-order table tr {
-  border-bottom: 2px solid rgba(132, 139, 200, 0.18);
+  border-bottom: 1px solid rgba(132, 139, 200, 0.18);
 }
 main .recent-order table tr:last-child {
   border: none;
@@ -247,12 +245,169 @@ main .recent-order table td {
 main .recent-order .show-all {
   display: block;
   text-align: center;
+  font-size: 15px;
   margin: 15px auto;
   font-weight: 500;
 }
 
+.container .right {
+  display: flex;
+  flex-direction: column;
+}
+.container .right .top {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.container .right .top button {
+  display: none;
+}
+.container .right .top .theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+  height: 30px;
+  background-color: rgba(132, 139, 200, 0.18);
+  border-radius: 0.8rem;
+}
+.container .right .top .theme-toggle span {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.container .right .top .theme-toggle span.active {
+  background-color: #7380ec;
+  color: #fff;
+  border-radius: 0.8rem;
+}
+.container .right .top .user {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.container .right .top .user .welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.container .right .top .user .welcome .username {
+  font-weight: 700;
+}
+.container .right .top .user .profile-photo {
+  margin-left: 5px;
+}
+.container .right .recent-updates {
+  margin-top: -3rem;
+  margin-bottom: 20px;
+}
+.container .right .recent-updates h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.container .right .recent-updates .updates .update {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+.container .right .recent-updates .updates .update:first-child {
+  margin-top: 0;
+}
+.container .right .recent-updates .updates .update:last-child {
+  margin-bottom: 0;
+}
+.container .right .recent-updates .updates .update .profile-photo {
+  margin-right: 15px;
+}
+.container .right .recent-updates .updates .update .message {
+  flex: 1;
+  color: #7d8da1;
+}
+.container .right .recent-updates .updates .update .message .username {
+  font-weight: 500;
+  color: #363949;
+}
+.container .right .recent-updates .updates .update .message .time {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.container .right .sales-analytics {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.container .right .sales-analytics h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.container .right .sales-analytics .list {
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+.container .right .sales-analytics .list-item {
+  display: flex;
+  align-items: center;
+}
+.container .right .sales-analytics .list-item .card-icon {
+  margin-right: 10px;
+}
+.container .right .sales-analytics .list-item .card-icon span {
+  padding: 5px;
+}
+.container .right .sales-analytics .list-item .details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.container .right .sales-analytics .list-item .details .sumary {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .right .sales-analytics .list-item .details .sumary .title,
+.container .right .sales-analytics .list-item .details .sumary .percent,
+.container .right .sales-analytics .list-item .details .sumary .count {
+  font-weight: 700;
+}
+.container .right .sales-analytics .list .add-product {
+  color: #7380ec;
+  font-weight: 500;
+  border: 2px dashed #7380ec;
+  border-radius: 2rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.container .right .sales-analytics .list .add-product:hover {
+  color: #f6f6f9;
+  background-color: #7380ec;
+}
+.container .right .sales-analytics .list .add-product span.icon {
+  margin-right: 10px;
+}
+.container .right .sales-analytics .bottom-space {
+  height: 45px;
+}
+
 .mg-tb-15 {
   margin: 15px 0;
+}
+
+small {
+  font-size: 1.2rem;
 }
 
 .text-muted {
@@ -273,6 +428,28 @@ main .recent-order .show-all {
 
 .danger {
   color: #ff7782 !important;
+}
+
+.profile-photo {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-icon span {
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+.card-icon.primary span {
+  background-color: #7380ec;
+}
+.card-icon.danger span {
+  background-color: #ff7782;
+}
+.card-icon.success span {
+  background-color: #41f1b6;
 }
 
 .card-decor {

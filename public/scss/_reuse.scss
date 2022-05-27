@@ -1,36 +1,69 @@
-.mg-tb-15{
+.mg-tb-15 {
     margin: 15px 0;
 }
 
-.text-muted{
+small {
+    font-size: 1.2rem;
+}
+
+.text-muted {
     color: $color-info-dark;
 }
 
 
-.primary{
+.primary {
     color: $color-primary !important;
 }
 
-.success{
+.success {
     color: $color-success !important;
 }
 
-.warning{
+.warning {
     color: $color-warning !important;
 }
 
-.danger{
+.danger {
     color: $color-danger !important;
 }
 
-.card-decor{
+.profile-photo {
+    $size: 45px;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-icon {
+    span {
+        color: $color-white;
+        padding: 10px;
+        border-radius: 50%;
+    }
+
+    &.primary span {
+        background-color: $color-primary;
+    }
+
+    &.danger span {
+        background-color: $color-danger;
+    }
+
+    &.success span {
+        background-color: $color-success;
+    }
+
+}
+
+.card-decor {
     border-radius: $card-border-radius;
     background: $color-white;
     padding: $card-padding;
     box-shadow: $box-shadow;
     transition: box-shadow 0.3s ease;
 
-    &:hover{
+    &:hover {
         box-shadow: none;
     }
 }

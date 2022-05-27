@@ -1,5 +1,11 @@
 main{
+    display: flex;
+    flex-direction: column;
     margin: 0 15px;
+
+    .top{
+        height: 65px;
+    }
 
     .date {
         margin: 5px 0;
@@ -22,25 +28,6 @@ main{
         gap: 20px;
 
         .card{
-
-            &-icon{
-                span{
-                    color: $color-white;
-                    padding: 10px;
-                    border-radius: 50%;
-                }
-            }
-
-            &:first-child .card-icon span{
-                background-color: $color-primary;
-            }
-            &:nth-child(2) .card-icon span{
-                background-color: $color-danger;
-            }
-            &:last-child .card-icon span{
-                background-color: $color-success;
-            }
-
             &-content{
                 display: flex;
                 align-items: center;
@@ -78,13 +65,13 @@ main{
                     }
 
                     &.sales svg circle{
-                        stroke-dashoffset:((100 - 81)/100)*$strokeLength;
+                        stroke-dashoffset:calc((100 - 81)/100)*$strokeLength;
                     }
                     &.expenses svg circle{
-                        stroke-dashoffset:((100 - 62)/100)*$strokeLength;
+                        stroke-dashoffset:calc((100 - 62)/100)*$strokeLength;
                     }
                     &.income svg circle{
-                        stroke-dashoffset:((100 - 44)/100)*$strokeLength;
+                        stroke-dashoffset:calc((100 - 44)/100)*$strokeLength;
                     }
 
                     .number{
@@ -104,17 +91,22 @@ main{
     // --------- End of Insights ---------
 
     .recent-order{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
         h2{
             font-weight: 700;
         }
 
         table{
+            flex: 1;
             width: 100%;
             background-color: $color-white;
             text-align: center;
 
             tr{
-                border-bottom: 2px solid $color-light;
+                border-bottom: 1px solid $color-light;
                 
                 &:last-child{
                     border: none;
@@ -137,6 +129,7 @@ main{
         .show-all{
             display: block;
             text-align: center;
+            font-size: 15px;
             margin: 15px auto;
             font-weight: 500;
         }
