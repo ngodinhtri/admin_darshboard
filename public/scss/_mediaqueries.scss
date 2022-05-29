@@ -59,16 +59,23 @@
         grid-template-columns: 1fr;
 
         aside {
-            display: none;
-            width: 40%;
+            width: 70%;
             height: 100vh;
             position: fixed;
-            left: 0;
             background: $color-background;
             z-index: 999;
             box-shadow: $box-shadow;
-            transition: all ease 0.3s;
+            transition: left ease 0.3s;
             padding: $card-padding;
+            left: -100%;
+
+            &[data-expanded="true"]{
+                left: 0;
+            }
+
+            &[data-expanded="false"]{
+                left: -100%;
+            }
 
             .list-menu {
                 flex: 1;
@@ -111,7 +118,8 @@
 
         .right {
             margin-top: 20px;
-            .top{
+
+            .top {
                 position: fixed;
                 background-color: $color-white;
                 top: 0;
@@ -121,7 +129,7 @@
                 align-items: center;
                 padding: $card-padding;
 
-                button{
+                button {
                     display: block;
                     background-color: transparent;
                     outline: none;
@@ -129,17 +137,17 @@
                     color: $color-dark;
                     cursor: pointer;
 
-                    span{
+                    span {
                         font-size: 4rem;
                     }
                 }
 
-                .user .welcome{
+                .user .welcome {
                     display: none;
                 }
             }
 
-            .recent-updates{
+            .recent-updates {
                 margin-top: 0;
             }
         }

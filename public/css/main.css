@@ -513,16 +513,21 @@ main .recent-order table tbody tr td:last-child {
     grid-template-columns: 1fr;
   }
   .container aside {
-    display: none;
-    width: 40%;
+    width: 70%;
     height: 100vh;
     position: fixed;
-    left: 0;
     background: #f6f6f9;
     z-index: 999;
     box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
-    transition: all ease 0.3s;
+    transition: left ease 0.3s;
     padding: 1.8rem;
+    left: -100%;
+  }
+  .container aside[data-expanded=true] {
+    left: 0;
+  }
+  .container aside[data-expanded=false] {
+    left: -100%;
   }
   .container aside .list-menu {
     flex: 1;
