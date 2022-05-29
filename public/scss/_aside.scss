@@ -50,7 +50,7 @@ aside {
                     margin-left: calc($ml/2);
                 }
 
-                .noti-count{
+                span.noti-count{
                     margin-left: 0;
                 }
             }
@@ -76,6 +76,10 @@ aside {
 
             span {
                 margin-left: calc($ml/2 - $w-ab/2);
+            }
+
+            span.noti-count{
+                margin-left: 0;
             }
 
             &::before {

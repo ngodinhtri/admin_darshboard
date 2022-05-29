@@ -1,0 +1,147 @@
+// ========== BIG TABLETS & SMALL LAPTOPS ============
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 100px auto 350px;
+
+        aside {
+
+            .top .logo h1,
+            h3 {
+                display: none;
+            }
+
+            .list-menu {
+                flex: 0;
+            }
+
+            .bottom .logout a h3 {
+                display: block;
+            }
+
+            .list-menu__item a {
+                width: 100%;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    main {
+        position: relative;
+
+        .insights {
+            grid-template-columns: 1fr;
+        }
+
+        .recent-order {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translateY(100%);
+
+            table {
+                width: 84vw;
+
+                thead tr th:nth-child(2),
+                thead tr th:last-child,
+                tbody tr td:nth-child(2),
+                tbody tr td:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// ========== SMALL TABLETS & MOBILE PHONES ============
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+
+        aside {
+            display: none;
+            width: 40%;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            background: $color-background;
+            z-index: 999;
+            box-shadow: $box-shadow;
+            transition: all ease 0.3s;
+            padding: $card-padding;
+
+            .list-menu {
+                flex: 1;
+            }
+
+            .top .logo h1,
+            h3 {
+                display: block;
+            }
+
+            .top .close {
+                display: block;
+            }
+        }
+
+        main {
+            margin: 70px 0 0 0;
+
+            .insights {
+                grid-template-columns: 1fr;
+            }
+
+            .recent-order {
+                position: unset;
+                transform: unset;
+                width: 100%;
+
+                table {
+                    width: 100%;
+
+                    thead tr th:nth-child(2),
+                    thead tr th:last-child,
+                    tbody tr td:nth-child(2),
+                    tbody tr td:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .right {
+            margin-top: 20px;
+            .top{
+                position: fixed;
+                background-color: $color-white;
+                top: 0;
+                left: 0;
+                margin-top: 0;
+                width: 100%;
+                align-items: center;
+                padding: $card-padding;
+
+                button{
+                    display: block;
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    color: $color-dark;
+                    cursor: pointer;
+
+                    span{
+                        font-size: 4rem;
+                    }
+                }
+
+                .user .welcome{
+                    display: none;
+                }
+            }
+
+            .recent-updates{
+                margin-top: 0;
+            }
+        }
+    }
+}
