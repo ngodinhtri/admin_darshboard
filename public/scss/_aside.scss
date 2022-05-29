@@ -68,7 +68,7 @@ aside {
         }
 
         &__item.active a {
-            background-color: $color-light;
+            background-color: var(--color-light);
             color: $color-primary;
             margin-left: 0;
             border-radius: $border-radius-1;

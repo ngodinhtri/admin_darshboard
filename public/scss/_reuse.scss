@@ -37,7 +37,7 @@ small {
 
 .card-icon {
     span {
-        color: $color-white;
+        color: var(--color-white);
         padding: 10px;
         border-radius: 50%;
     }
@@ -58,9 +58,9 @@ small {
 
 .card-decor {
     border-radius: $card-border-radius;
-    background: $color-white;
+    background: var(--color-white);
     padding: $card-padding;
-    box-shadow: $box-shadow;
+    box-shadow: var(--box-shadow);
     transition: box-shadow 0.3s ease;
 
     &:hover {

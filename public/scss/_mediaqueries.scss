@@ -62,9 +62,9 @@
             width: 70%;
             height: 100vh;
             position: fixed;
-            background: $color-background;
+            background: var(--color-background);
             z-index: 999;
-            box-shadow: $box-shadow;
+            box-shadow: var(--box-shadow);
             transition: left ease 0.3s;
             padding: $card-padding;
             left: -100%;
@@ -121,7 +121,7 @@
 
             .top {
                 position: fixed;
-                background-color: $color-white;
+                background-color: var(--color-white);
                 top: 0;
                 left: 0;
                 margin-top: 0;
@@ -134,7 +134,7 @@
                     background-color: transparent;
                     outline: none;
                     border: none;
-                    color: $color-dark;
+                    color: var(--color-dark);
                     cursor: pointer;
 
                     span {
