@@ -1,5 +1,5 @@
 # Admin Darshboard
-# Mars weather app
+
 _Using HTML, SASS, JS_
 
 **Reference links:**
